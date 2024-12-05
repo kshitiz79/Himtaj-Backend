@@ -8,7 +8,7 @@ const rateLimit = require('express-rate-limit');
 const morgan = require('morgan');
 require("dotenv").config();
 
-const uploadImage = require("./utils/uploadimage");
+const uploadImage = require("./../utils/uploadimage");
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -38,14 +38,14 @@ app.use('/api/', limiter); // Apply to all API routes
 app.use(morgan('combined'));
 
 // Routes
-const authRoutes = require('./src/users/user.route');
-const productRoutes = require('./src/products/products.route');
-const reviewRoutes = require('./src/reviews/reviews.route');
-const statsRoutes = require('./src/stats/stats.route');
-const cartRoutes = require('./src/cart/cart.route');
-const dealRoutes = require('./src/deals/deals.route');
-const couponRoutes = require('./src/coupon/coupon.route');
-const orderRoutes = require('./src/orders/order.route');
+const authRoutes = require('./users/user.route');
+const productRoutes = require('./products/products.route');
+const reviewRoutes = require('./reviews/reviews.route');
+const statsRoutes = require('./stats/stats.route');
+const cartRoutes = require('./cart/cart.route');
+const dealRoutes = require('./deals/deals.route');
+const couponRoutes = require('./coupon/coupon.route');
+const orderRoutes = require('./orders/order.route');
 
 
 
